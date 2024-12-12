@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.hero-container {
+    background: url('assets/goldmain.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1.25rem;
+}
+
+nav a:hover {
+    color: #bebcbc;
+}
+
+nav button {
+    background: #c6a50f;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+nav button:hover {
+    background: #c6a50f;
+}
+
+.hero-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0px 100px;
+}
+
+.hero-left {
+    max-width: 50%; 
+}
+
+.hero-right {
+    max-width: 30%; 
+    display: flex;
+    justify-content: flex-end; 
+    flex-direction: column; 
+    gap: 15px;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    margin: 0 0 20px;
+}
+
+.hero-content > p:first-of-type {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 24px;
+}
+
+.hero-content > p:last-of-type {
+    font-size: 20px;
+    margin: 0 0 20px;
+    max-width: 600px;
+}
+
+.hero-links {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-links a {
+    background: #eac318;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.hero-links a:hover {
+    background: #c6a50f;
+}
+
+.slider-controls {
+    display: flex;
+    gap: 10px;
+    margin: 20px 40px;
+    justify-content: end;
+}
+
+.slider-controls button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    width: 80px;
+    height: 40px;
+}
+
+.slider-controls button:hover {
+    background: #eac318;
+}
+
+.homepage-contact-logos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 100px;
+    align-self: flex-start;
+}
+
+.circle-logo {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.circle-logo i {
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.circle-logo:hover {
+    background-color: #eac318;
+    transform: scale(1.1);
+}
+
+.circle-logo:hover i {
+    color: white;
+}
