@@ -11,15 +11,6 @@
     <title>Goldmann</title>
 </head>
 <body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
     <div class="hero-container">
         <header>
             <div class="logo">Goldmann</div>
@@ -96,6 +87,51 @@
         </div>
     </div>
 
+      <!-- FAQQQQQQQQQQQQQ -->
+      <div class="container">
+        <h1 class="title">Sıkça Sorulan Sorular</h1>
+        <div class="faq">
+          <div class="faq-list">
+            <div class="faq-item">
+              <div class="question">Hangi tür projelerde hizmet veriyorsunuz? <span>+</span></div>
+              <div class="answer">Konut, ticari binalar, endüstriyel yapılar ve villa projelerinde uzmanlaşmış bir firmayız. Projelerimizin her aşamasında profesyonel çözümler sunuyoruz.</div>
+            </div>
+            <div class="faq-item">
+              <div class="question">Projelerinizi ne kadar sürede tamamlıyorsunuz? <span>+</span></div>
+              <div class="answer">Projenin büyüklüğüne bağlı olarak değişmekle birlikte, konut projelerimizi genellikle 8 ila 14 ay arasında tamamlıyoruz. Daha büyük projeler için süre, planlama ve müşteri ihtiyaçlarına göre belirlenir.</div>
+            </div>
+            <div class="faq-item">
+              <div class="question">Malzeme seçiminde nelere dikkat ediyorsunuz? <span>+</span></div>
+              <div class="answer">Kalite ve dayanıklılık bizim için önceliklidir. Projelerimizde çevre dostu, sertifikalı ve uzun ömürlü malzemeler kullanıyoruz. Ayrıca, müşterilerimizin özel taleplerini de dikkate alıyoruz.</div>
+            </div>
+            <div class="faq-item">
+              <div class="question">Anahtar teslim projeleriniz var mı? <span>+</span></div>
+              <div class="answer">Evet, müşterilerimize anahtar teslim hizmet sunuyoruz. Bu hizmet kapsamında tüm inşaat süreçlerini üstleniyor ve müşterilerimize tamamlanmış, taşınmaya hazır bir yapı teslim ediyoruz.</div>
+            </div>
+            <div class="faq-item">
+              <div class="question">Zemin etüdü ve yapı güvenliği konusunda nasıl bir süreç izliyorsunuz? <span>+</span></div>
+              <div class="answer">Projelere başlamadan önce detaylı bir zemin etüdü yapıyor ve yapıların deprem yönetmeliklerine uygunluğunu sağlıyoruz. Güvenlik, inşaat sürecimizde asla taviz vermediğimiz bir önceliktir.</div>
+            </div>
+          </div>
+          <div class="contact-box">
+            <i class="fa-solid fa-message fa-beat fa-2xl" style="color: #000000;"></i>
+            <p>Başka sorularınız mı var?</p>
+            <p>Aşağıdaki butona tıklayarak bizimle iletişime geçebilirsiniz</p>
+            <button>Bizimle İletişime Geçin</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="whatsapp-button">
+        <a href="https://wa.me/905XXXXXXXXX" target="_blank">
+          <i class="fa-brands fa-whatsapp fa-2xl" style="color: #ffffff;"></i>
+        </a>
+      </div>
+      
+     
+     
+
 
     <!-- //FOOOTER  -->
 
@@ -103,7 +139,7 @@
         <div class="footer-container">
             <div class="footer-left">
                 <img src="site-logo.png" alt="Site Logo" class="footer-logo">
-                <p>Powered By BKDevs</p>
+               
             </div>
             <div class="footer-right">
                 <div class="footer-links">
@@ -138,8 +174,16 @@
             </div>
         </div>
     </footer>
-    
-</body>
-</html>
+    <div class="bkdevs">
+        <p>Powered by <a href="https://bkdevs.com">BKDEVS </a>designed by <a href="https://bkdevs.com">BKDEVS</a></p>
+    </div>
+    <script>
+        document.querySelectorAll('.faq-item .question').forEach(question => {
+          question.addEventListener('click', () => {
+            const item = question.parentElement;
+            item.classList.toggle('open');
+          });
+        });
+      </script>
 </body>
 </html>

@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    text-decoration: none;
 }
 
 header {
@@ -178,14 +179,161 @@ nav button:hover {
         flex-direction: column;
     }
 
-    .contact-info {
-        border-radius: 10px 10px 0 0;
-    }
     .social-icons{
         justify-content: center;
     }
 }
+/* FAQQ QUESTİON  */
 
+.container {
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .faq {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .faq-list {
+    flex: 2;
+  }
+
+  .faq-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .faq-item .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.3s;
+  }
+
+  .faq-item .question:hover {
+    background-color: #f0f0f0;
+  }
+
+  .faq-item .answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    font-size: 18px;
+    color: #000000;
+    background-color: #f9f9f9;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+
+  .faq-item.open .answer {
+    max-height: 200px;
+    padding: 15px;
+  }
+
+  .contact-box {
+    flex: 1;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 50px;
+    text-align: center;
+  }
+
+  .contact-box p {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+  .contact-box button {
+    background-color: black;
+    margin-top: 50px;
+    color: white;
+    width: 250px;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.6s;
+  }
+
+  .contact-box button:hover {
+    background-color: #333;
+  }
+
+  @media (max-width: 768px) {
+    .faq {
+      flex-direction: column;
+    }
+
+    .contact-box {
+      margin-top: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.5rem;
+    }
+
+    .faq-item .question {
+      font-size: 0.9rem;
+    }
+
+    .faq-item .answer {
+      font-size: 0.8rem;
+    }
+  }
+
+  .whatsapp-button {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .whatsapp-button a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .whatsapp-button i {
+    font-size: 36px;
+  }
+  
 
 /* FOOOOOOOOOOOOOOOOOTER */
 
@@ -258,6 +406,17 @@ footer {
 
 .footer-links a:hover {
     opacity: 1;
+}
+.bkdevs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    height: 70px;
+}
+.bkdevs a:visited{
+    color: white;
 }
 
 @media (max-width: 768px) {
