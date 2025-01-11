@@ -26,7 +26,7 @@ nav {
 }
 
 nav a {
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   transition: color 0.3s ease;
   font-size: 1.25rem;
@@ -61,7 +61,7 @@ nav button:hover {
 }
 
 .contact-info {
-  background-color: #060606;
+  background-color: #2885ff;
   color: white;
   padding: 40px;
   flex: 1;
