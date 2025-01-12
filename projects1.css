@@ -308,3 +308,45 @@ footer {
     margin-top: 10px;
 }
 
+.cta-container {
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+.cta-container h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.cta-container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-button, .details-button {
+    background: #ffe134;
+    color: #333;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.contact-button:hover, .details-button:hover {
+    background: #ffd700;
+    transform: scale(1.05);
+}
+
