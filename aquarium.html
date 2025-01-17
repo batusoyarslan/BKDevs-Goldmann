@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="aquarium.css" />
+    <link rel="stylesheet" href="loader.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <title>Aquarium</title>
+  </head>
+  <body>
+    <div class="hero-container fade-in">
+      <header>
+        <div class="logo">Goldmann Aquarium</div>
+        <nav>
+          <a href="homepage.html">Ana Sayfa</a>
+          <a href="homepage.html">Hakkımızda</a>
+          <a href="homepage.html">Projeler</a>
+          <button>
+            <a href="contactus.html" class="join-now">İletişime Geçin</a>
+          </button>
+        </nav>
+      </header>
+      <div class="hero-content">
+        <div class="hero-left">
+          <h1>Goldmann Aquarium</h1>
+          <p>
+            Bu eşsiz villa, modern mimarisi, geniş yaşam alanları ve özel
+            havuzuyla konforlu bir tatil deneyimi sunuyor. Doğayla iç içe
+            huzurlu bir ortamda, hem dinlenip hem de sevdiklerinizle keyifli
+            anlar yaşayabilirsiniz. Şehirden uzak, sakin bir yaşamın tadını
+            çıkarın
+          </p>
+          <div class="hero-links">
+            <a href="contactus.html">Bizimle İletişime Geçin</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-container scale-in">
+      <div class="project-details slide-in">
+        <h2>Proje Detayları</h2>
+        <p>
+          Proje1, deniz kenarında huzurlu bir yaşam arayanlar için modern ve
+          konforlu bir yaşam alanı sunuyor. Şehrin gürültüsünden uzak, Ege'nin
+          büyüleyici sahillerinde yer alan bu proje, hem doğayla iç içe olmak
+          isteyenlere hem de lüks bir yaşamdan ödün vermeyenlere hitap ediyor.
+        </p>
+        <p>
+          Özel olarak tasarlanmış iç ve dış mimarisi, geniş yeşil alanları ve
+          benzersiz deniz manzarasıyla, hayalinizdeki yaşamı gerçeğe
+          dönüştürüyor. Sabahları denizin ferahlatıcı kokusuyla uyanabilir,
+          akşamları huzurlu bir ortamda sevdiklerinizle vakit geçirebilirsiniz.
+        </p>
+        <ul>
+          <li>Konum: Ege Sahili, Deniz Kenarı</li>
+          <li>Özellikler: Modern tasarım, özel havuz, geniş peyzaj alanları</li>
+          <li>
+            Avantajlar: Huzurlu ortam, doğayla iç içe yaşam, deniz manzaralı
+            konum
+          </li>
+        </ul>
+        <p>
+          Proje1, tatil evi ya da sürekli yaşam alanı olarak kullanılabilecek
+          bir yapıya sahip. Size ve ailenize unutulmaz bir deneyim sunmak için
+          tasarlanmış bu eşsiz proje, hayalinizdeki yaşama bir adım daha
+          yaklaşmanızı sağlıyor.
+        </p>
+      </div>
+      <div class="project-gallery fade-in">
+        <div class="large-image">
+          <img
+            src="goldmanngörsel/goldmann aquarium/DJI_0255.webp"
+            alt="Proje Görseli"
+            id="mainImage"
+            loading="lazy"
+          />
+        </div>
+        <div class="thumbnail-images">
+          <img
+            src="goldmanngörsel/goldmann aquarium/DJI_0255.webp"
+            alt="Görsel 1"
+            class="thumbnail active"
+            onclick="changeImage(this)"
+            loading="lazy"
+          />
+          <img
+            src="goldmanngörsel/goldmann aquarium/DJI_0231.webp"
+            alt="Görsel 2"
+            class="thumbnail"
+            onclick="changeImage(this)"
+            loading="lazy"
+          />
+          <img
+            src="goldmanngörsel/goldmann aquarium/DJI_0251.webp"
+            alt="Görsel 3"
+            class="thumbnail"
+            onclick="changeImage(this)"
+            loading="lazy"
+          />
+          <img
+            src="goldmanngörsel/goldmann aquarium/DSC_0154.webp"
+            alt="Görsel 4"
+            class="thumbnail"
+            onclick="changeImage(this)" 
+            loading="lazy"
+          />
+          <img
+            src="goldmanngörsel/goldmann aquarium/DSC_0160.webp"
+            alt="Görsel 5"
+            class="thumbnail"
+            onclick="changeImage(this)"
+            loading="lazy"
+          />
+          <img
+            src="goldmanngörsel/goldmann aquarium/DSC_0171.webp"
+            alt="Görsel 6"
+            class="thumbnail"
+            onclick="changeImage(this)"
+            loading="lazy"
+          />
+          <img
+            src="goldmanngörsel/goldmann aquarium/DSC_0180.webp"
+            alt="Görsel 7"
+            class="thumbnail"
+            onclick="changeImage(this)"
+            loading="lazy"
+          />
+          <img
+            src="goldmanngörsel/goldmann aquarium/DSC_0189.webp"
+            alt="Görsel 8"
+            class="thumbnail"
+            onclick="changeImage(this)"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="project-location slide-in">
+      <h2>Projenin Konumu</h2>
+      <p>
+        Projemiz, Ege'nin muhteşem sahil şeridinde, toplu taşıma ve sosyal
+        alanlara yakın bir konumda yer alıyor.
+      </p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3093.1240751488335!2d26.76983131212644!3d39.17189997154865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba6d0026331849%3A0x55cab126212bd337!2sGoldmann%20aquarium!5e0!3m2!1str!2str!4v1737113493371!5m2!1str!2str"
+        width="100%"
+        height="400"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <div class="location-buttons">
+        <button>
+          <a href="https://maps.app.goo.gl/QABAcEkxyWMdEhrY9"
+            >Google Yol Tarifi</a
+          >
+        </button>
+        <button>
+          <a href="https://yandex.com.tr/harita/-/CHaUEDZ2"
+            >Yandex Yol Tarifi</a
+          >
+        </button>
+      </div>
+    </div>
+    <div class="cta-container scale-in">
+      <h2>Hayalinizdeki Evi Bulmak İçin Şimdi İletişime Geçin!</h2>
+      <div class="cta-buttons">
+        <button class="contact-button">İletişime Geç</button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <img
+            src="goldmanngörsel/goldmann aquarium/aquariumgoldman.png"
+            alt="Site Logo"
+            class="footer-logo"
+          />
+        </div>
+        <div class="footer-right">
+          <div class="footer-links">
+            <h3>Product</h3>
+            <ul>
+              <li><a href="homepage.html">Ana Sayfa</a></li>
+              <li><a href="contactus.html">İletişime Geç</a></li>
+              <li><a href="homepage.html">Hakkımızda</a></li>
+              <li><a href="homepage.html">Projelerimiz</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Projelerimiz</h3>
+            <ul>
+              <li><a href="#">Garden</a></li>
+              <li><a href="#">Küçükköy</a></li>
+              <li><a href="#">Oliva</a></li>
+              <li><a href="#">Sayfiye</a></li>
+            </ul>
+          </div>
+          <div class="footer-newsletter">
+            <h3>Haber Bülteni</h3>
+            <input type="email" placeholder="E-posta adresinizi girin" />
+            <button>Abone Ol</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="projects.js" defer></script>
+  </body>
+</html>
