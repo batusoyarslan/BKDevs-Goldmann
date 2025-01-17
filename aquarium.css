@@ -21,7 +21,7 @@ body {
   bottom: 0;
   background: url("goldmanngörsel/goldmann\ aquarium/DSC_0102.webp")
     center/cover no-repeat;
-  filter: blur(5px);
+  /* filter: blur(5px); */
   z-index: -1;
 }
 
@@ -297,18 +297,6 @@ footer {
 .footer-links a:hover {
   opacity: 1;
 }
-.bkdevs {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  height: 50px;
-}
-.bkdevs a:visited {
-  color: rgb(0, 0, 0);
-}
-
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;

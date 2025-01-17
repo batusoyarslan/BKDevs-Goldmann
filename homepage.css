@@ -1,7 +1,9 @@
 body {
     margin: 0;
     font-family: 'Poppins', Arial, sans-serif;
+    scroll-behavior: smooth;
 }
+
 
 .hero-container {
     background: url('assets/pexels-asadphoto-3319962.jpg') center/cover no-repeat;
@@ -458,7 +460,6 @@ nav button:hover {
     margin-bottom: 20px;
     position: relative;
     z-index: 2;
-    text-transform: uppercase;
     font-weight: 800;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
@@ -739,3 +740,124 @@ nav button:hover {
         display: none;
     }
 }
+footer {
+    color: rgb(0, 0, 0);
+  }
+  
+  .footer-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .footer-left {
+    flex: 1;
+  }
+  
+  .footer-logo {
+    margin-left: 20px;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-left p {
+    font-size: 18px;
+  }
+  
+  .footer-right {
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .footer-links {
+    flex: 1;
+  }
+  
+  .footer-links h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  
+  .footer-links a:hover {
+    opacity: 1;
+  }
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-left {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  
+    .footer-right {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-links {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  }
+  .footer-newsletter {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .footer-newsletter h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .newsletter-input {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .footer-newsletter input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    font-size: 16px;
+  }
+  
+  .footer-newsletter button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .footer-newsletter button:hover {
+    background-color: #45a049;
+  }
