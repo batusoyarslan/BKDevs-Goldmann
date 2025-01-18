@@ -783,6 +783,7 @@ nav button:hover {
 }
 footer {
   color: rgb(0, 0, 0);
+  background-color: #F1F1F2;
 }
 
 .footer-container {
@@ -794,12 +795,15 @@ footer {
 
 .footer-left {
   flex: 1;
+  background-color: #F1F1F2;
 }
 
 .footer-logo {
   margin-left: 20px;
-  max-width: 300px;
-  margin-bottom: 20px;
+  max-width: 350px;
+  background-color: #F1F1F2;
+  padding: 20px;
+  border-radius: 8px;
 }
 
 .footer-left p {
