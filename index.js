@@ -78,3 +78,23 @@ window.addEventListener("load", () => {
     });
   });
   
+// Hamburger Menü İşlemleri
+const hamburger = document.querySelector('.hamburger-menu');
+const navMenu = document.querySelector('.nav-menu');
+const closeMenu = document.querySelector('.close-menu');
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.add('active');
+});
+
+closeMenu.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+});
+
+// Menü linklerine tıklandığında menüyü kapat
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
+});
+  
