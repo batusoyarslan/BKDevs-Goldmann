@@ -69,6 +69,10 @@ nav button:hover {
     max-width: 50%; 
 }
 
+.hero-left p{
+    font-size: 24px
+}
+
 .hero-right {
     max-width: 30%; 
     display: flex;
@@ -107,6 +111,9 @@ nav button:hover {
     border-radius: 5px;
     font-size: 16px;
     transition: background 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 .hero-links a:hover {
@@ -179,6 +186,7 @@ nav button:hover {
     padding: 50px;
     background-color: #ffffff;
     gap: 240px;
+    flex-wrap: wrap; /* Eklendi */
 }
 
 .content {
@@ -236,8 +244,10 @@ nav button:hover {
 
 .image img{
     border-radius: 10px;
-    height: 600px;
-    width: 500px;
+    width: 100%; /* Değiştirildi */
+    height: auto; /* Değiştirildi */
+    max-height: 600px; /* Eklendi */
+    object-fit: cover; /* Eklendi */
 }
 
 
@@ -367,6 +377,7 @@ nav button:hover {
 .service-box p {
     margin: 0;
     font-size: 1em;
+    text-align: center;
 }
 
 .projects-slider {
@@ -861,3 +872,199 @@ footer {
   .footer-newsletter button:hover {
     background-color: #45a049;
   }
+
+
+
+  /* Tablet görünüm: 768px - 1024px */
+@media (max-width: 1024px) {
+    .hero-left p{
+        font-size: 18px
+    } 
+
+  header {
+    text-align: center; /* Başlığı ortala */
+    font-size: 1.8rem; /* Daha küçük bir font boyutu */
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 sütun düzeni */
+    gap: 20px;
+  }
+
+  .card {
+    padding: 15px; /* Kart içeriğini sıkıştır */
+    font-size: 0.9rem; /* Daha küçük yazı boyutu */
+  }
+
+  .button {
+    padding: 10px 15px; /* Butonları küçült */
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobil görünüm: max 768px */
+@media (max-width: 768px) {
+  header {
+    font-size: 1.5rem; /* Başlık boyutunu daha da küçült */
+    margin-bottom: 20px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr; /* Tek sütun düzeni */
+    gap: 15px;
+  }
+
+  .card {
+    padding: 10px; /* Kartların içeriğini sıkıştır */
+    font-size: 0.8rem;
+  }
+
+  .button {
+    padding: 8px 12px; /* Butonları daha küçük yap */
+    font-size: 0.8rem;
+  }
+
+  footer {
+    text-align: center; /* Footer içeriklerini ortala */
+    font-size: 0.8rem;
+  }
+  
+}
+
+@media (max-width: 1024px) {
+    header {
+        text-align: center;
+        padding: 15px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 1.1rem;
+    }
+
+    nav button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* Mobil görünüm: max 768px */
+@media (max-width: 768px) {
+
+    .hero-left p{
+        font-size: 12px
+    } 
+
+    header {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 36px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    nav button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .join-now {
+        font-size: 0.9rem;
+    }
+
+    
+
+    .homepage-contact-logos{
+    }
+
+   
+}
+
+
+@media (max-width: 768px) {
+    nav a {
+        font-size: 12px;
+        font-weight: bolder;
+    }
+
+}
+
+
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px;
+    }
+
+    .content {
+        max-width: 90%;
+        margin-right: 0;
+    }
+
+    .content h1 {
+        font-size: 1.8em;
+    }
+
+    .content p {
+        font-size: 0.9em;
+    }
+
+    .image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Mobil görünüm: max 768px */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .content {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .content h1 {
+        font-size: 1.5em;
+    }
+
+    .content p {
+        font-size: 0.85em;
+    }
+
+    .image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .read-more {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    .service-box p {
+        font-size: 14px;
+    }
+
+}
+
+
