@@ -69,7 +69,7 @@ nav button:hover {
 }
 
 .hero-left p {
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .hero-right {
@@ -102,10 +102,10 @@ nav button:hover {
   gap: 20px;
 }
 
-.hero-links a {
+.hero-links button {
   background: #eac318;
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 22px;
   text-decoration: none;
   border-radius: 5px;
   font-size: 16px;
@@ -113,9 +113,15 @@ nav button:hover {
   align-items: center;
   justify-content: center;
   display: flex;
+  border: none;
 }
 
-.hero-links a:hover {
+.hero-links a{
+  color: white;
+  text-decoration: none;
+}
+
+.hero-links button:hover {
   background: #c6a50f;
 }
 
@@ -967,19 +973,9 @@ footer {
 
   .dropdown-menu {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: static;
     padding: 0;
     margin: 0;
-  }
-
-  .dropdown-menu a {
-    color: #fff !important;
-    font-size: 16px !important;
-    padding: 10px 0;
-    width: 100%;
-    text-align: center;
   }
 
   .dropdown-header {
@@ -1096,7 +1092,6 @@ footer {
 
 @media (max-width: 395px) {
   .hero-content {
-    flex-direction: column;
     padding: 0 10px;
   }
 
