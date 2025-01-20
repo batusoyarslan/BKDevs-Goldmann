@@ -1,3 +1,22 @@
+// Header işlemleri
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const dropdown = document.querySelector('.dropdown');
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+}
+if (dropdown) {
+    dropdown.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+            dropdown.classList.toggle('active');
+        }
+    });
+}
+
+
 //SLİDER KODU
 const slider = document.querySelector(".slider-track");
 if (slider) {
@@ -79,54 +98,3 @@ window.addEventListener("load", () => {
         }, 1000);
     }
 });
-
-// Hamburger Menü İşlemleri
-const hamburger = document.querySelector('.hamburger-menu');
-const navMenu = document.querySelector('.nav-menu');
-const closeMenu = document.querySelector('.close-menu');
-
-if (hamburger && navMenu && closeMenu) {
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.add('active');
-    });
-
-    closeMenu.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-    });
-
-    // Menü linklerine tıklandığında menüyü kapat (dropdown hariç)
-    document.querySelectorAll('.nav-menu > a, .nav-menu button').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-        });
-    });
-}
-
-// Dropdown menü işlemleri
-const dropdownToggle = document.querySelector('.dropdown-toggle');
-const dropdown = document.querySelector('.dropdown');
-
-if (dropdownToggle && dropdown) {
-    dropdownToggle.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation(); // Event'in yukarı yayılmasını engelle
-        dropdown.classList.toggle('active');
-    });
-
-    // Dropdown menü dışına tıklandığında menüyü kapat
-    document.addEventListener('click', (e) => {
-        if (!dropdown.contains(e.target) && !e.target.closest('.dropdown')) {
-            dropdown.classList.remove('active');
-        }
-    });
-
-    // Sadece dropdown menü linklerine tıklandığında menüleri kapat
-    document.querySelectorAll('.dropdown-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            dropdown.classList.remove('active');
-            if (navMenu) {
-                navMenu.classList.remove('active');
-            }
-        });
-    });
-}
