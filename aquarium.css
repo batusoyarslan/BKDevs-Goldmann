@@ -719,8 +719,11 @@ footer {
     gap: 10px;
   }
 
-  .hero-links a {
-    width: 30%;
+  .hero-links button{
+    margin: 0 90px;
+  }
+  .hero-right{
+    margin: auto;
   }
 }
 
@@ -733,6 +736,15 @@ footer {
   .hero-right {
     max-width: 100%;
     text-align: center;
+  }
+
+  .hero-right{
+    margin: auto;
+  }
+
+
+  .hero-links button{
+    margin: 0 90px;
   }
 }
 

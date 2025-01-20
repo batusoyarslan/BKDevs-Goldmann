@@ -50,7 +50,7 @@ body {
   }
   
   nav a:hover {
-    color: #bebcbc;
+    color: #ffffff;
   }
   
   nav button {
@@ -719,8 +719,11 @@ body {
       gap: 10px;
     }
   
-    .hero-links a {
-      width: 30%;
+    .hero-links button{
+      margin: 0 90px;
+    }
+    .hero-right{
+      margin: auto;
     }
   }
   
@@ -734,7 +737,17 @@ body {
       max-width: 100%;
       text-align: center;
     }
+  
+    .hero-right{
+      margin: auto;
+    }
+  
+  
+    .hero-links button{
+      margin: 0 90px;
+    }
   }
+  
   
   
   
