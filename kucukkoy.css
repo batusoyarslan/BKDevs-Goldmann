@@ -2,6 +2,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Poppins", Arial, sans-serif;
+    overflow-x: hidden;
+    width: 100%;
   }
   
   .hero-container {
@@ -10,6 +12,8 @@ body {
     display: flex;
     flex-direction: column;
     color: #fff;
+    overflow-x: hidden;
+    width: 100%;
   }
   
   .hero-container::before {
@@ -23,62 +27,93 @@ body {
     z-index: -1;
   }
   
-  header {
+  .header {
+    position: fixed;
+    width: 90%;
+    padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
+    z-index: 1000;
   }
   
   .logo {
-    font-size: 42px;
+    font-size: 2rem;
     font-weight: bold;
     color: #fff;
   }
   
-  nav {
+  .nav-links {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 2rem;
   }
   
-  nav a {
-    color: #000000;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-size: 1.25rem;
-  }
-  
-  nav a:hover {
-    color: #bebcbc;
-  }
-  
-  nav button {
-    background: #c6a50f;
+  .nav-links a {
     color: #fff;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
   }
   
-  nav button:hover {
+  .nav-links a:hover {
+    color: #eac318;
+  }
+  
+  .dropdown {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .dropdown span {
+    color: #fff;
+    font-size: 1.2rem;
+  }
+  
+  .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    display: none;
+  }
+  
+  .dropdown-content a {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    display: block;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .contact-btn {
+    background: #eac318;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: #fff;
+    transition: background 0.3s;
+  }
+  
+  .contact-btn:hover {
     background: #c6a50f;
   }
   
-  .hamburger-menu {
+  .hamburger {
     display: none;
     cursor: pointer;
-    z-index: 1000;
   }
   
-  .bar {
+  .hamburger span {
+    display: block;
     width: 25px;
     height: 3px;
-    background-color: #fff;
+    background: #fff;
     margin: 5px 0;
-    transition: 0.4s;
+    transition: 0.3s;
   }
   
   .close-menu {
@@ -90,10 +125,6 @@ body {
     color: #fff;
     cursor: pointer;
     z-index: 1001;
-  }
-  
-  .dropdown {
-    position: relative;
   }
   
   .dropdown-toggle {
@@ -153,37 +184,76 @@ body {
   
   /* Mobil uyumluluk için medya sorguları */
   @media (max-width: 768px) {
-    .hamburger-menu {
-      display: block;
-    }
-  
-    .nav-menu {
-      position: fixed;
-      right: -100%;
-      top: 0;
-      width: 70%;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.9);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 30px;
-      transition: 0.5s ease;
-      z-index: 1000;
+    .hero-content {
       padding: 20px;
-      text-align: center;
     }
   
-    .nav-menu.active {
+    .hero-left {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+  
+    .hero-right {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+  
+    .homepage-contact-logos {
+      margin: 20px auto;
+      flex-direction: row;
+      justify-content: center;
+      gap: 15px;
+    }
+  
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 200px;
+      background: rgba(0, 0, 0, 0.9);
+      flex-direction: column;
+      padding: 2rem;
+      transition: 0.3s;
+    }
+  
+    .nav-links.active {
       right: 0;
+    }
+  
+    .hamburger {
+      display: block;
+      z-index: 1001;
+    }
+  
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 6px);
+    }
+  
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -5px);
+    }
+  
+    .dropdown-content {
+      position: static;
+      background: none;
+      display: none;
+      padding: 1rem 0;
+    }
+  
+    .dropdown.active .dropdown-content {
+      display: block;
     }
   
     .close-menu {
       display: block;
     }
   
-    .nav-menu a, .dropdown-toggle {
+    .nav-links a, .dropdown-toggle {
       color: #fff;
       font-size: 18px;
       width: 100%;
