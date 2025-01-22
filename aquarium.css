@@ -738,6 +738,14 @@ footer {
 .cta-buttons button:hover {
   background-color: #3e1e83;
 }
+.cta-container a{
+  color: white;
+  text-decoration: none;
+}
+.cta-container a:visited {
+  color: white;
+  
+}
 
 @media (max-width: 1024px) {
   .hero-content {
@@ -825,4 +833,7 @@ footer {
   }
 }
 
+.project-locationtext{
+  margin-left: 30px;
+}
 
