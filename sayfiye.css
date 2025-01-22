@@ -23,7 +23,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("goldmanngörsel/goldmann\ sayfiye/cam9_eff.webp") center/cover no-repeat;
+    background: url("goldmanngörsel/goldmann\ sayfiye/saf5.webp") center/cover no-repeat;
     z-index: -1;
   }
 
@@ -94,19 +94,6 @@ body {
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  
-  .contact-btn {
-    background: #eac318;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    color: #fff;
-    transition: background 0.3s;
-  }
-  
-  .contact-btn:hover {
-    background: #c6a50f;
-  }
-  
   .hamburger {
     display: none;
     cursor: pointer;

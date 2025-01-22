@@ -15,6 +15,7 @@ body {
   align-items: center;
   z-index: 1000;
   box-sizing: border-box;
+  background-color: #005C95;
 }
 
 .logo {
@@ -107,7 +108,7 @@ body {
   transition: 0.3s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 867px) {
   .nav-links {
     position: fixed;
     top: 0;
