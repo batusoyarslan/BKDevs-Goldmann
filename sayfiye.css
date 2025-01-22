@@ -818,8 +818,19 @@ body {
       margin: 0 90px;
     }
   }
-  
-  
-  
+  .project-locationtext{
+    margin-left: 30px;
+  }
+
+
+  .cta-container a{
+    color: white;
+    text-decoration: none;
+  }
+  .cta-container a:visited {
+    color: white;
+    
+  }
+
   
   
