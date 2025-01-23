@@ -10,7 +10,7 @@ if (hamburger && navLinks) {
 }
 if (dropdown) {
     dropdown.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 869) {
             dropdown.classList.toggle('active');
         }
     });

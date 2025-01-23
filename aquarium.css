@@ -789,7 +789,7 @@ footer {
   }
 
   .hero-left p {
-    font-size: 12px;
+    font-size: 15px;
   }
 }
 
@@ -808,13 +808,13 @@ footer {
   }
 
   .hero-links button {
-    width: 80%;
+    width: 40%;
   }
 }
 
 @media (max-width: 395px) {
   .hero-content {
-    padding: 0 10px;
+    padding: 110px 10px;
   }
 
   .hero-left,
