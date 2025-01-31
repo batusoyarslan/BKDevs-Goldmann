@@ -995,3 +995,34 @@ footer {
     font-size: 0.9em;
   }
 }
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-button a {
+  color: white;
+  text-decoration: none;
+}
+
+.whatsapp-button i {
+  font-size: 36px;
+}
