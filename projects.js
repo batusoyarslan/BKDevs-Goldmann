@@ -41,27 +41,75 @@ window.addEventListener("load", () => {
   setTimeout(autoChangeImages, 1000);
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Animasyon yapılacak öğeleri seç
-  const elements = document.querySelectorAll(".fade-in, .slide-in, .scale-in");
-  
-  // Performans için daha düşük threshold
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          requestAnimationFrame(() => {
-            entry.target.classList.add("visible");
-          });
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.1,
-      rootMargin: "50px"
-    }
-  );
 
-  elements.forEach((element) => observer.observe(element));
+
+
+
+
+
+let currentImageIndex = 0;
+const images = document.querySelectorAll('.thumbnail');
+const mainImage = document.getElementById('mainImage');
+
+// Thumbnail'a tıklandığında resmi değiştir
+function changeImage(element) {
+    // Aktif thumbnail'ı güncelle
+    document.querySelector('.thumbnail.active').classList.remove('active');
+    element.classList.add('active');
+    
+    // Ana resmi güncelle
+    mainImage.src = element.src;
+    mainImage.alt = element.alt;
+    
+    // Mevcut index'i güncelle
+    currentImageIndex = Array.from(images).indexOf(element);
+}
+
+// Önceki resme geç
+function prevImage() {
+    currentImageIndex = currentImageIndex > 0 ? currentImageIndex - 1 : images.length - 1;
+    const newImage = images[currentImageIndex];
+    
+    // Aktif thumbnail'ı güncelle
+    document.querySelector('.thumbnail.active').classList.remove('active');
+    newImage.classList.add('active');
+    
+    // Ana resmi güncelle
+    mainImage.src = newImage.src;
+    mainImage.alt = newImage.alt;
+    
+    // Smooth geçiş efekti
+    mainImage.style.opacity = '0';
+    setTimeout(() => {
+        mainImage.style.opacity = '1';
+    }, 100);
+}
+
+// Sonraki resme geç
+function nextImage() {
+    currentImageIndex = currentImageIndex < images.length - 1 ? currentImageIndex + 1 : 0;
+    const newImage = images[currentImageIndex];
+    
+    // Aktif thumbnail'ı güncelle
+    document.querySelector('.thumbnail.active').classList.remove('active');
+    newImage.classList.add('active');
+    
+    // Ana resmi güncelle
+    mainImage.src = newImage.src;
+    mainImage.alt = newImage.alt;
+    
+    // Smooth geçiş efekti
+    mainImage.style.opacity = '0';
+    setTimeout(() => {
+        mainImage.style.opacity = '1';
+    }, 100);
+}
+
+// Klavye ok tuşları ile geçiş
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+        prevImage();
+    } else if (e.key === 'ArrowRight') {
+        nextImage();
+    }
 });

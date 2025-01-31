@@ -436,11 +436,11 @@ body {
 }
 
 .large-image {
+  position: relative;
   width: 100%;
   height: 400px;
   overflow: hidden;
   border-radius: 10px;
-  position: relative;
   background-color: #ddd;
 }
 
@@ -448,10 +448,35 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: absolute;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  display: block;
 }
+
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
 
 .large-image img.active {
   opacity: 1;
