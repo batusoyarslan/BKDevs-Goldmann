@@ -836,4 +836,9 @@ footer {
 .project-locationtext{
   margin-left: 30px;
 }
+@media (max-width: 768px) {
+  .thumbnail-images {
+    display: none;
+  }
+}
 

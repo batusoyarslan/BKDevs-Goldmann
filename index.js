@@ -18,72 +18,67 @@ if (dropdown) {
 
 
 //SLİDER KODU
+// Slider'ın fare ile kaydırılabilmesi
 const slider = document.querySelector(".slider-track");
-if (slider) {
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-    let currentTranslate = 0;
-    let prevTranslate = 0;
+let isDown = false;
+let startX;
+let scrollLeft;
 
-    slider.addEventListener("mousedown", (e) => {
-        isDown = true;
-        slider.classList.add("dragging");
-        startX = e.pageX;
-        prevTranslate = currentTranslate;
-    });
+slider.addEventListener("mousedown", (e) => {
+  isDown = true;
+  slider.classList.add("active");
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
 
-    slider.addEventListener("mousemove", (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX;
-        const walk = x - startX;
-        currentTranslate = prevTranslate + walk;
-        // Sınırları kontrol et
-        const maxTranslate = 0;
-        const minTranslate = -(slider.offsetWidth / 1.5);
-        currentTranslate = Math.max(
-            Math.min(currentTranslate, maxTranslate),
-            minTranslate
-        );
-        slider.style.transform = `translateX(${currentTranslate}px)`;
-    });
+slider.addEventListener("mouseleave", () => {
+  isDown = false;
+  slider.classList.remove("active");
+});
 
-    slider.addEventListener("mouseup", () => {
-        isDown = false;
-        slider.classList.remove("dragging");
-    });
+slider.addEventListener("mouseup", () => {
+  isDown = false;
+  slider.classList.remove("active");
+});
 
-    slider.addEventListener("mouseleave", () => {
-        isDown = false;
-        slider.classList.remove("dragging");
-    });
+slider.addEventListener("mousemove", (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 2; // Kaydırma hızını ayarlayabilirsiniz
+  slider.scrollLeft = scrollLeft - walk;
+});
 
-    // Otomatik kaydırma animasyonu
-    function autoSlide() {
-        if (!isDown) {
-            currentTranslate -= 0.5;
-            if (currentTranslate <= -(slider.offsetWidth / 1.5)) {
-                currentTranslate = 0;
-            }
-            slider.style.transform = `translateX(${currentTranslate}px)`;
-        }
-        requestAnimationFrame(autoSlide);
-    }
-    autoSlide();
+// Slider'ın otomatik kayması
+function autoSlide() {
+  const sliderTrack = document.querySelector(".slider-track");
+  const sliderWidth = sliderTrack.scrollWidth;
+  const containerWidth = sliderTrack.clientWidth;
 
-    document.querySelectorAll(".project-card").forEach((card) => {
-        card.addEventListener("click", function (e) {
-            if (!isDown) {
-                const href = this.getAttribute("data-href");
-                if (href) {
-                    window.location.href = href;
-                }
-            }
-        });
-    });
+  // Slider'ın sonuna gelindiğinde başa dön
+  if (sliderTrack.scrollLeft + containerWidth >= sliderWidth) {
+    sliderTrack.scrollLeft = 0;
+  } else {
+    sliderTrack.scrollLeft += 1; // Kaydırma hızını ayarlayabilirsiniz
+  }
+
+  requestAnimationFrame(autoSlide);
 }
 
+// Otomatik kaydırmayı başlat
+autoSlide();
+
+// Proje kartlarına tıklanabilirlik
+document.querySelectorAll(".project-card").forEach((card) => {
+  card.addEventListener("click", function (e) {
+    if (!isDown) {
+      const href = this.querySelector("a").getAttribute("href");
+      if (href) {
+        window.location.href = href;
+      }
+    }
+  });
+});
 // Loader işlemi
 window.addEventListener("load", () => {
     const loaderContainer = document.querySelector(".loader-container");

@@ -470,6 +470,7 @@ body {
   animation: scroll 40s linear infinite;
   gap: 30px;
   padding: 0 15px;
+  overflow-x: scroll; /* Kaydırma çubuğunu etkinleştir */
 }
 
 @keyframes scroll {
@@ -480,9 +481,12 @@ body {
     transform: translateX(calc(-250px * 6 - 30px * 6));
   }
 }
-
 .slider-track:hover {
-  animation-play-state: paused;
+  animation-play-state: running;
+}
+.slider-track.active {
+  cursor: grabbing;
+  user-select: none;
 }
 
 .project-card {
