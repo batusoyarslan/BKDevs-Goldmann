@@ -113,3 +113,27 @@ document.addEventListener('keydown', (e) => {
         nextImage();
     }
 });
+
+
+
+
+
+
+
+
+
+
+// Loader işlemi
+window.addEventListener("load", () => {
+  const loaderContainer = document.querySelector(".loader-container");
+  if (loaderContainer) {
+      document.body.style.overflow = "hidden";
+      setTimeout(() => {
+          loaderContainer.classList.add("hidden");
+          document.body.style.overflow = "auto";
+          setTimeout(() => {
+              loaderContainer.remove();
+          }, 500);
+      }, 1000);
+  }
+});

@@ -19,65 +19,82 @@
     <title>Goldmann - Oliva</title>
   </head>
   <body>
-    <div class="hero-container fade-in">
-      <header class="header">
-        <div class="logo">Goldmann</div>
-        <nav class="nav">
-            <div class="nav-links">
-                <a href="homepage.html">Ana Sayfa</a>
-                <a href="#aboutus">Hakkımızda</a>
-                <div class="dropdown">
-                    <span>Projelerimiz</span>
-                    <div class="dropdown-content">
-                        <a href="aquarium.html">Aquarium</a>
-                        <a href="kucukkoy.html">Küçükköy</a>
-                        <a href="oliva.html">Oliva</a>
-                        <a href="sayfiye.html">Sayfiye</a>
-                    </div>
-                </div>
-                <a href="contactus.html" class="contact-btn">İletişime Geç</a>
-            </div>
-        </nav>
+    <div class="loader-container">
+      <div class="loader">
+          <div class="cloud front">
+              <span class="left-front"></span>
+              <span class="right-front"></span>
+          </div>
+          <span class="sun sunshine"></span>
+          <span class="sun"></span>
+          <div class="cloud back">
+              <span class="left-back"></span>
+              <span class="right-back"></span>
+          </div>
+      </div>
+  </div>
 
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </header>
-      <div class="hero-content">
-        <div class="hero-left">
-          <p>Sağlam Temeller, Güzel Gelecekler</p>
-      <h1>Goldmann - Oliva</h1>
-      <p>Goldman İnşaat, estetik ve işlevselliği bir araya getiren projelerle modern yaşam alanları inşa eder. Güçlü teknik altyapımız ve deneyimli ekibimizle her detayı titizlikle ele alıyoruz.</p>
-      <div class="hero-links">
-        <button><a href="homepage.html">Projelerimiz</a></button>
-        <button><a href="contactus.html">İletişime Geç</a></button>
-      </div>
-      </div>
+  <header class="header">
+      <div class="logo">Goldmann</div>
       
-      <div class="hero-right">
-          <div class="homepage-contact-logos">
-              <div class="circle-logo">
-                  <i class="fa-brands fa-facebook-f"></i>
+      <nav class="nav">
+          <div class="nav-links">
+              <a href="homepage.html">Ana Sayfa</a>
+              <a href="#aboutus">Hakkımızda</a>
+              <div class="dropdown">
+                  <span>Projelerimiz</span>
+                  <div class="dropdown-content">
+                      <a href="aquarium.html">Aquarium</a>
+                      <a href="kucukkoy.html">Küçükköy</a>
+                      <a href="oliva.html">Oliva</a>
+                      <a href="sayfiye.html">Sayfiye</a>
+                  </div>
               </div>
-              <div class="circle-logo">
-                  <i class="fa-brands fa-instagram"></i>
+              <a href="contactus.html" class="contact-btn">İletişime Geç</a>
+          </div>
+      </nav>
+
+      <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+  </header>
+
+  <div class="hero-container">
+      <div class="hero-content">
+          <div class="hero-left">
+              <p>Sağlam Temeller, Güzel Gelecekler</p>
+              <h1>Goldmann Oliva</h1>
+              <p>Goldman İnşaat, estetik ve işlevselliği bir araya getiren projelerle modern yaşam alanları inşa eder. Güçlü teknik altyapımız ve deneyimli ekibimizle her detayı titizlikle ele alıyoruz.</p>
+              <div class="hero-links">
+                  <button><a href="#projects">Projelerimiz</a></button>
+                  <button><a href="contactus.html">İletişime Geç</a></button>
               </div>
-              <div class="circle-logo">
-                  <i class="fa-brands fa-x-twitter"></i>
-              </div>
-              <div class="circle-logo">
-                  <i class="fa-brands fa-linkedin"></i>
-              </div>
-              <div class="circle-logo">
-                  <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          
+          <div class="hero-right">
+              <div class="homepage-contact-logos">
+                  <div class="circle-logo">
+                      <i class="fa-brands fa-facebook-f"></i>
+                  </div>
+                  <div class="circle-logo">
+                      <i class="fa-brands fa-instagram"></i>
+                  </div>
+                  <div class="circle-logo">
+                      <i class="fa-brands fa-x-twitter"></i>
+                  </div>
+                  <div class="circle-logo">
+                      <i class="fa-brands fa-linkedin"></i>
+                  </div>
+                  <div class="circle-logo">
+                      <i class="fa-brands fa-whatsapp"></i>
+                  </div>
               </div>
           </div>
       </div>
-      </div>
-      </div>
-    </div>
+  </div>
+
     <div class="project-container scale-in">
       <div class="project-details slide-in">
         <h2>Proje Detayları</h2>
@@ -110,12 +127,14 @@
       </div>
       <div class="project-gallery fade-in">
         <div class="large-image">
+          <button class="prev-btn" onclick="prevImage()">&#10094;</button>
           <img
             src=""
             alt="Proje Görseli"
             id="mainImage"
             loading="lazy"
           />
+          <button class="next-btn" onclick="nextImage()">&#10095;</button>
         </div>
         <div class="thumbnail-images">
           <img
