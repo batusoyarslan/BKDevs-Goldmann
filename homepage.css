@@ -168,6 +168,7 @@ body {
   .contact-btn {
     margin-top: 20px;
   }
+
 }
 
 .hero-container {
@@ -176,7 +177,6 @@ body {
   display: flex;
   flex-direction: column;
   color: #fff;
-  padding-top: 80px;
   box-sizing: border-box;
   width: 100%;
   overflow-x: hidden;
@@ -922,7 +922,9 @@ footer {
     justify-content: center;
   }
 
-
+  .hero-container{
+    padding-top: 80px;
+  }
   
 }
 

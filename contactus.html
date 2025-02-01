@@ -12,16 +12,31 @@
 </head>
 <body>
     <div class="hero-container">
-        <header>
+        <header class="header">
             <div class="logo">Goldmann</div>
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Projects</a>
-                <a href="#">Pages</a>
-                <a href="#">Contact</a>
-                <button><a href="#" class="join-now">Join Now</a></button>
+            
+            <nav class="nav">
+                <div class="nav-links">
+                    <a href="homepage.html">Ana Sayfa</a>
+                    <a href="#aboutus">Hakkımızda</a>
+                    <div class="dropdown">
+                        <span>Projelerimiz</span>
+                        <div class="dropdown-content">
+                            <a href="aquarium.html">Aquarium</a>
+                            <a href="kucukkoy.html">Küçükköy</a>
+                            <a href="oliva.html">Oliva</a>
+                            <a href="sayfiye.html">Sayfiye</a>
+                        </div>
+                    </div>
+                    <a href="contactus.html" class="contact-btn">İletişime Geç</a>
+                </div>
             </nav>
+      
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </header>
     <div class="contact-container">
         <div class="contact-info">
@@ -188,6 +203,8 @@
           });
         });
       </script>
+      <script src="index.js"></script>
+      <script src="projects.js" defer></script>
 </body>
 </html>
 
