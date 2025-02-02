@@ -13,7 +13,7 @@ body {
   align-items: center;
   z-index: 1000;
   box-sizing: border-box;
-  background-color: #005C95;
+  background-color: #f4f4f4;
 }
 
 .logo {
@@ -169,7 +169,6 @@ body {
   display: flex;
   flex-direction: column;
   color: #fff;
-  padding-top: 80px;
   box-sizing: border-box;
   width: 100%;
   overflow-x: hidden;
@@ -533,7 +532,6 @@ body {
   }
 
   .homepage-contact-logos {
-    flex-direction: row;
     margin: 20px auto;
     justify-content: center;
     gap: 20px;
@@ -737,6 +735,19 @@ footer {
   .footer-newsletter input[type="email"] {
     width: 80%;
   } 
+  .hero-container{
+    padding-top: 80px;
+  }
+
+  .hero-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .homepage-contact-logos{
+    flex-direction: row;
+  }
 }
 
 @media (max-width: 395px) {

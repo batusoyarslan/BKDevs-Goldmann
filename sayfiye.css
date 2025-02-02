@@ -13,7 +13,7 @@ body {
     align-items: center;
     z-index: 1000;
     box-sizing: border-box;
-    background-color: #005C95;
+    background-color: #f4f4f4;
   }
   
   .logo {
@@ -164,12 +164,11 @@ body {
   
   
   .hero-container {
-    background: url("goldmanngörsel/goldmann\ aquarium/DJI_0255.webp") center/cover no-repeat;
+    background: url("goldmanngörsel/goldmann\ sayfiye/saf5.webp") center/cover no-repeat;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     color: #fff;
-    padding-top: 80px;
     box-sizing: border-box;
     width: 100%;
     overflow-x: hidden;
@@ -504,10 +503,8 @@ body {
   
   @media (max-width: 1024px) {
     .hero-content {
-      flex-direction: row;
       flex-wrap: wrap;
       padding: 20px;
-      text-align: center;
       gap: 30px;
     }
   
@@ -522,14 +519,13 @@ body {
     }
   
     .homepage-contact-logos {
-      flex-direction: row;
+
       margin: 20px auto;
       justify-content: center;
       gap: 20px;
     }
   
     .hero-links {
-      justify-content: center;
     }
   }
   
@@ -731,6 +727,21 @@ body {
     .footer-newsletter input[type="email"] {
       width: 80%;
     } 
+
+    .hero-content{
+      display: flex;
+      flex-direction: column;
+      padding-top: 80px;
+      text-align: center;
+    }
+
+    .homepage-contact-logos{
+      flex-direction: row;
+    }
+
+    .hero-links{
+      justify-content: center;
+    }
   }
   
   @media (max-width: 395px) {

@@ -6,50 +6,165 @@
   text-decoration: none;
 }
 
-header {
+
+
+.header {
+  width: 100%;
+  padding: 1rem 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 5%;
+  z-index: 1000;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 2rem;
   font-weight: bold;
-  color: #fff;
+  color: #000000;
 }
 
-nav {
+.nav-links {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 2rem;
 }
 
-nav a {
+.nav-links a {
   color: #000000;
   text-decoration: none;
-  transition: color 0.3s ease;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
+  transition: color 0.3s;
 }
 
-nav a:hover {
-  color: #bebcbc;
+.nav-links a:hover {
+  color: #eac318;
 }
 
-nav button {
-  background: #c6a50f;
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
+.dropdown {
+  position: relative;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
-nav button:hover {
-  background: #c6a50f;
+.dropdown span {
+  color: #000000;
+  font-size: 1.2rem;
 }
 
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgb(212, 212, 212);
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  display: none;
+}
+
+.dropdown-content a {
+  color: #000000;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.contact-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.close-menu {
+  display: none;
+  font-size: 24px;
+  color: #000;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #000000;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+@media (max-width: 867px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background: white;
+    flex-direction: column;
+    padding: 60px 20px;
+    transition: 0.3s;
+    z-index: 1000;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .close-menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  .dropdown-content {
+    position: static;
+    background: none;
+    display: none;
+    padding: 10px 0;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .dropdown-content a {
+    color: #000;
+    padding: 8px 15px;
+  }
+
+  .dropdown.active .dropdown-content {
+    display: block;
+  }
+
+  .contact-btn {
+    margin-top: 20px;
+  }
+}
 
 
 .contact-container {
@@ -180,6 +295,13 @@ nav button:hover {
 
   .social-icons{
       justify-content: center;
+  }
+  .contact-info{
+    text-align: center;
+  }
+
+  .info-item{
+    justify-content: center;
   }
 }
 /* FAQQ QUESTİON  */
@@ -439,3 +561,4 @@ footer {
       text-align: center;
   }
 }
+

@@ -13,7 +13,7 @@ body {
   align-items: center;
   z-index: 1000;
   box-sizing: border-box;
-  background-color: #005C95;
+  background-color: #f4f4f4;
 }
 
 .logo {
@@ -169,7 +169,6 @@ body {
   display: flex;
   flex-direction: column;
   color: #fff;
-  padding-top: 80px;
   box-sizing: border-box;
   width: 100%;
   overflow-x: hidden;
@@ -522,7 +521,6 @@ body {
   }
 
   .homepage-contact-logos {
-    flex-direction: row;
     margin: 20px auto;
     justify-content: center;
     gap: 20px;
@@ -535,8 +533,9 @@ body {
 
 @media (max-width: 768px) {
   .hero-content {
-    padding: 15px;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
   }
 
   .hero-left h1 {
@@ -546,11 +545,15 @@ body {
   .hero-left p {
     font-size: 15px;
   }
+
+  .homepage-contact-logos{
+    flex-direction: row;
+  }
 }
 
 @media (max-width: 480px) {
   .hero-content {
-    padding: 10px;
+    padding-top: 80px;
   }
 
   .hero-left {
