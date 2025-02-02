@@ -308,7 +308,6 @@ body {
   display: flex;
   justify-content: space-around;
   gap: 20px;
-  margin: 40px;
   padding: 20px 20px;
   flex-wrap: wrap;
 }
@@ -686,6 +685,7 @@ footer {
 }
 
 .footer-newsletter button {
+  margin-top: 10px;
   padding: 10px 20px;
   background-color: #4caf50;
   color: white;

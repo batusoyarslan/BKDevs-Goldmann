@@ -36,9 +36,6 @@ window.addEventListener("load", () => {
       changeImage(firstThumbnail);
     }
   }
-  
-  // Görüntüler yüklendikten sonra otomatik değişimi başlat
-  setTimeout(autoChangeImages, 1000);
 });
 
 
