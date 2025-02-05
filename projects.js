@@ -102,22 +102,6 @@ function nextImage() {
     }, 100);
 }
 
-// Klavye ok tuşları ile geçiş
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') {
-        prevImage();
-    } else if (e.key === 'ArrowRight') {
-        nextImage();
-    }
-});
-
-
-
-
-
-
-
-
 
 
 // Loader işlemi
