@@ -746,8 +746,9 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .thumbnail-images {
-    display: none;
+  .thumbnail {
+  width: 40px;
+  height: 40px;
   }
 }
 
